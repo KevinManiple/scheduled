@@ -2,17 +2,15 @@ package com.vivo.demo.scheduled;
 
 import java.util.Date;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.kevin.demo.controller.IndexController;
 
 public class HelloJob implements Job {
     
-    private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
+    private static final Logger LOGGER = LogManager.getLogger(HelloJob.class);
     
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {

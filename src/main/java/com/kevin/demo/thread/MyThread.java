@@ -1,13 +1,13 @@
 package com.kevin.demo.thread;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.kevin.demo.common.scheduled.ScheduledSupport;
 
 public class MyThread extends Thread {
     
-    private static final Logger LOGGER = LoggerFactory.getLogger(MyThread.class);
+    private static final Logger LOGGER = LogManager.getLogger(MyThread.class);
     
     private String key;
     
